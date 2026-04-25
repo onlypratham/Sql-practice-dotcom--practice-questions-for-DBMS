@@ -1,8 +1,5 @@
--- Show first name, last name, and gender of patients whose gender is 'M'
+-- Show first name and last name concatinated into one column to show their full name.
 
 SELECT
-  first_name,
-  last_name,
-  gender
-FROM patients
-WHERE gender = 'M';
+  CONCAT(first_name, ' ', last_name) AS full_name
+FROM patients;
