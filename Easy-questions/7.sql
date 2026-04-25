@@ -1,5 +1,5 @@
--- Show first name and last name concatinated into one column to show their full name.
+-- Show how many patients have a birth_date with 2010 as the birth year.
 
-SELECT
-  CONCAT(first_name, ' ', last_name) AS full_name
-FROM patients;
+SELECT COUNT(*) AS total_patients
+FROM patients
+WHERE YEAR(birth_date) = 2010;
